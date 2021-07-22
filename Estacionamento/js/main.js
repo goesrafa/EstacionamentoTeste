@@ -30,9 +30,9 @@ function cadastrarVeiculo(e) {
         localStorage.setItem('patio', JSON.stringify(veiculo));
     }
 
-    document.getElementById('formulairo').reset();
+    document.getElementById('formulario').reset();
 
-    mostrarpatio();
+    mostrapatio();
     e.preventDeault();
 }
 
@@ -61,7 +61,7 @@ function removerVeiculo(placa) {
 
     localStorage.setItem('patio', JSON.stringify(patio));
 
-    mostrarpatio();
+    mostrapatio();
 }
 
 //Calculo do total final
@@ -98,7 +98,7 @@ function calcularHoras(preco, hora, minuto) {
 function mostratudo(num) {
 
     if (num == 1) {
-       mostrarpatio();
+       mostrapatio();
     }
     document.getElementById('total').innerHTML = '';
     document.getElementById('tabela').style.display = 'block';

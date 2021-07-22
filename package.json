@@ -8,11 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git remote add origin https://github.com/goesrafa/Estacionamento.git"
+    "url": ""
   },
   "author": "Rafaela Góes",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.0.2"
-  }
+  },
+  "devDependencies": {}
 }
