@@ -32,7 +32,7 @@ function cadastrarVeiculo(e) {
 
     document.getElementById('formulario').reset();
 
-    mostrapatio();
+    mostrarpatio();
     e.preventDeault();
 }
 
@@ -61,14 +61,14 @@ function removerVeiculo(placa) {
 
     localStorage.setItem('patio', JSON.stringify(patio));
 
-    mostrapatio();
+    mostrarpatio();
 }
 
 //Calculo do total final
 
 function calcularHoras(preco, hora, minuto) {
 
-    var Total = 0;
+    var Toot = 0;
     var preco = parseInt(preco);
     var hora = parseInt(hora);
     var minuto = parseInt(minuto);
@@ -85,53 +85,54 @@ function calcularHoras(preco, hora, minuto) {
     var precMin = (qtdeMin / 60) * preco;
 
     if (precHor == 0) {
-        total = precMin.toFixed(2);
+        Tot = precMin.toFixed(2);
     } else {
-        Total = (precHor + precMin).toFixed(2);
+        Tot = (precHor + precMin).toFixed(2);
     }
+	total.style.border = " 2px solid black";
 
-    total.innerHTML = 'R$ ' + Total;
+    total.innerHTML = 'R$ ' + Tot;
 }
 
 //Mostrando as funções dos botões
 
-function mostratudo(num) {
+function mostraTudo(num) {
 
     if (num == 1) {
-       mostrapatio();
+       mostrarpatio();
     }
     document.getElementById('total').innerHTML = '';
-    document.getElementById('tabela').style.display = 'block';
-    document.getElementById('esconde').style.display = 'inline-block';
-    document.getElementById('mostrar').style.display = 'none';
-    document.getElementById('total').style.display = 'block';
+    document.getElementById('tabela').style.display= "block";
+    document.getElementById('esconde').style.display = "inline-block";
+    document.getElementById('mostrar').style.display = "none";
+    document.getElementById('total').style.display = "block";
 }
 
-function esconde() {
-    document.getElementById('tabela').style.display = 'none';
-    document.getElementById('mostrar').style.display = 'inline-block';
-    document.getElementById('esconde').style.display = 'none';
-    document.getElementById('total').style.display = 'none';
+function escondeTudo() {
+    document.getElementById('tabela').style.display = '';
+    document.getElementById('mostrar').style.display = "inline-block";
+    document.getElementById('esconde').style.display = "none";
+    document.getElementById('total').style.display = "none";
 }
 
 function pesquisar() {
     var pesq = document.getElementById('procurar').nodeValue.trim().toUpperCase();
-    veiculo = JSON.parse(localStorage.getItem('patio'));
+    veiculos = JSON.parse(localStorage.getItem('patio'));
 
-    var patioResultado = document.getElementById('resiltados');
+    var patioResultado = document.getElementById('resultados');
 
     for (var i = 0; i < veiculo.length; i++) {
 
-        if (pesq == veiculo[i].placa) {
-            var placa = veiculo[i].placa;
-            var preco = veiculo[i].preco;
-            var hora = veiculo[i].hora;
-            var minuto = veiculo[i].minuto;
+        if (pesq == veiculos[i].placa) {
+            var placa = veiculos[i].placa;
+            var preco = veiculos[i].preco;
+            var hora = veiculos[i].hora;
+            var minuto = veiculos[i].minuto;
 
 
             patioResultado.innerHTML = '<tr><td>' + placa + '</td>' + '<td>' + preco + '</td>' +
                 '<td>' + hora + '</td>' + ':' + '<td>' + minuto + '</td>' +
-                '<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\'' + placa + '\',\'' + preco + '\',\'' + hora + '\',\'' + minutos + '\')"><img src="/Estacionamento/icons/calculator.png">R$ </button></td>' +
+                '<td><button type="button" class="btn btn-primary" onclick="calculaHoras(\'' + placa + '\',\'' + preco + '\',\'' + hora + '\',\'' + minutos + '\')"><img src="/Estacionamento/icons2/calculator.png">R$ </button></td>' +
                 '<td><button type="button" class="btn btn-danger" onclick="confirma(\'' + placa + '\')" ></button></td>' +
                 '</tr>';
 
