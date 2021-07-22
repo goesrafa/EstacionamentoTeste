@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git remote add origin https://github.com/goesrafa/EstacionamentoTeste.git"
   },
   "author": "Rafaela Góes",
   "license": "ISC",
