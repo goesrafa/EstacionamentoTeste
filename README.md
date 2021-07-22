@@ -2,7 +2,6 @@
 
 Para abrir o projeto, primeiro efetue o clone do projeto. 
 Abra no VScode e execute o comando no terminal: 
- npm init, para poder baixar a pasta de node_modules,
   abra com a extensão do Live Serve.
 
 
