@@ -2,10 +2,10 @@ document.getElementById('formulario').addEventListener('submit', cadastrarVeicul
 
 function cadastrarVeiculo(e) {
     var placaVeiculo = document.getElementById('placaVeiculo').nodeValue.trim().toUpperCase();
-    var valHor = document.getElementById('valHor').nodeValue;
+    var valHora = document.getElementById('valHora').nodeValue;
     var horEnt = new Date();
 
-    if (placaVeiculo == "" || valHor == "") {
+    if (placaVeiculo == "" || valHora == "") {
 
         alert("Os campos devem ser preenchidos!");
         return false;
@@ -15,7 +15,7 @@ function cadastrarVeiculo(e) {
 
     var veiculo = {
         placa: placaVeiculo,
-        preco: valHor,
+        preco: valHora,
         hora: horEnt.getHours(),
         minutos: horEnt.getMinutes(),
     };
