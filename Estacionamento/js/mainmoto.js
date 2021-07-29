@@ -41,9 +41,9 @@ function confirmar(placa) {
 
     if (c) {
         removerVeiculo(placa);
-        console.log('Carro removido');
+        console.log('Moto removida');
     } else {
-        console.log('Carro não removido');
+        console.log('Moto não removida');
         return false;
     }
 
